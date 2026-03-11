@@ -1,0 +1,137 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260311141046
+Username: CH1DE-BLAYNEZ\DELL
+RunAs User: CH1DE-BLAYNEZ\DELL
+Configuration Name: 
+Machine: CH1DE-BLAYNEZ (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\DELL\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2025.4.0' -BundledModulesPath 'c:\Users\DELL\.vscode\extensions\ms-vscode.powershell-2025.4.0\modules' -EnableConsoleRepl -StartupBanner "PowerShell Extension v2025.4.0
+Copyright (c) Microsoft Corporation.
+
+https://aka.ms/vscode-powershell
+Type 'help' to get help.
+" -LogLevel 'Warning' -LogPath 'c:\Users\DELL\AppData\Roaming\Code\logs\20260311T123042\window2\exthost\ms-vscode.powershell' -SessionDetailsPath 'c:\Users\DELL\AppData\Roaming\Code\User\globalStorage\ms-vscode.powershell\sessions\PSES-VSCode-908-677499.json' -FeatureFlags @() 
+Process ID: 9580
+PSVersion: 5.1.26100.7920
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7920
+BuildVersion: 10.0.26100.7920
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\scripts\download-log.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cgit\x5cwdd131PS C:\git\wdd131> ]633;B
+PS>$global:__psEditorServices_userInput = $args[0]
+PS>$global:__psEditorServices_userInput = ""
+PS>.\scripts\download-temples.ps1
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:93
++ ... '<meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["''] ...
++                                                                  ~
+Missing ')' in method call.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:93
++ ... <meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']' ...
++                                                                 ~
+Unexpected token ']' in expression or statement.
+
+At C:\git\wdd131\scripts\download-temples.ps1:31 char:7
++   try {
++       ~
+Missing closing '}' in statement block or type definition.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:95
++ ... meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']', ...
++                                                                  ~
+The Try statement is missing its Catch or Finally block.
+
+At C:\git\wdd131\scripts\download-temples.ps1:29 char:27
++ foreach ($item in $items) {
++                           ~
+Missing closing '}' in statement block or type definition.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:95
++ ... eta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']',  ...
++                                                                 ~
+Unexpected token ')' in expression or statement.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:97
++ ... ta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']', [ ...
++                                                                  ~
+Missing type name after '['.
+
+At C:\git\wdd131\scripts\download-temples.ps1:42 char:95
++ ... s @{ 'User-Agent' = 'Mozilla/5.0' } -ErrorAction Stop -Verbose:$false
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The string is missing the terminator: '.
+
+At C:\git\wdd131\scripts\download-temples.ps1:36 char:93
++ ... , '<meta[^>]+name=["'']twitter:image["''][^>]*content=["'']([^"']+)[" ...
++                                                                  ~
+Missing type name after '['.
+
+At C:\git\wdd131\scripts\download-temples.ps1:53 char:1
++ 
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:93
++ ... '<meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["''] ...
++                                                                  ~
+Missing ')' in method call.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:93
++ ... <meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']' ...
++                                                                 ~
+Unexpected token ']' in expression or statement.
+
+At C:\git\wdd131\scripts\download-temples.ps1:31 char:7
++   try {
++       ~
+Missing closing '}' in statement block or type definition.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:95
++ ... meta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']', ...
++                                                                  ~
+The Try statement is missing its Catch or Finally block.
+
+At C:\git\wdd131\scripts\download-temples.ps1:29 char:27
++ foreach ($item in $items) {
++                           ~
+Missing closing '}' in statement block or type definition.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:95
++ ... eta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']',  ...
++                                                                 ~
+Unexpected token ')' in expression or statement.
+
+At C:\git\wdd131\scripts\download-temples.ps1:34 char:97
++ ... ta[^>]+property=["'']og:image["''][^>]*content=["'']([^"']+)["'']', [ ...
++                                                                  ~
+Missing type name after '['.
+
+At C:\git\wdd131\scripts\download-temples.ps1:42 char:95
++ ... s @{ 'User-Agent' = 'Mozilla/5.0' } -ErrorAction Stop -Verbose:$false
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The string is missing the terminator: '.
+
+At C:\git\wdd131\scripts\download-temples.ps1:36 char:93
++ ... , '<meta[^>]+name=["'']twitter:image["''][^>]*content=["'']([^"']+)[" ...
++                                                                  ~
+Missing type name after '['.
+
+At C:\git\wdd131\scripts\download-temples.ps1:53 char:1
++
+Missing closing ')' in expression.
+    + CategoryInfo          : ParserError: (:) [], ParseException
+    + FullyQualifiedErrorId : MissingEndParenthesisInMethodCall
+
+]633;D;1]633;A]633;P;Cwd=C:\x5cgit\x5cwdd131PS C:\git\wdd131> ]633;B
+PS>$global:__psEditorServices_userInput = $args[0]
+PS>$global:__psEditorServices_userInput = ""
+PS>Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260311141048
+**********************

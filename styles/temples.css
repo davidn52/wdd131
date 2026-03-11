@@ -1,0 +1,44 @@
+/* Mobile-first styles for Temple Album */
+:root{
+  --bg:#fcfbf9;
+  --card:#ffffff;
+  --accent:#0b6b63;
+  --accent-2:#145d9c;
+  --muted:#6b6b6b;
+  --gap:1rem;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  margin:0;
+  background:var(--bg);
+  color:#1f1f1f;
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+header{background:var(--card);box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;gap:var(--gap);padding:.75rem 1rem}
+.site-title{font-size:1.25rem;margin:0;color:var(--accent);font-weight:600}
+#hamburger{margin-left:auto;background:none;border:0;font-size:1.6rem;cursor:pointer;padding:.25rem}
+
+.main-nav{display:none;flex-direction:column;gap:.25rem;margin-top:.5rem}
+.main-nav a{display:block;padding:.45rem .6rem;color:var(--accent);text-decoration:none;border-radius:6px;font-weight:500}
+.main-nav a:hover, .main-nav a:focus{background:var(--accent);color:#fff;outline:none}
+
+main{padding:1rem}
+main h1{max-width:900px;margin:0 auto 1rem;text-align:center;font-size:1.5rem}
+.gallery{display:grid;grid-template-columns:1fr;gap:1rem;max-width:900px;margin:0 auto}
+
+figure{background:var(--card);padding:.5rem;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+figure img{width:100%;height:auto;display:block;border-radius:6px}
+figcaption{padding-top:.5rem;color:var(--muted);font-size:.95rem;text-align:center}
+
+footer{padding:1rem;text-align:center;color:var(--muted);font-size:.95rem}
+
+/* Show mobile nav when open */
+.main-nav.open{display:flex}
+
+/* Small utilities */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
