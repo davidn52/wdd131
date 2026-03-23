@@ -1,0 +1,19 @@
+/* Place Large CSS */
+.weather-icon {
+    display: none;
+}
+
+.weather h2::after {
+    content: "⛅";
+    margin-left: 0.5rem;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.description {
+    max-width: 800px;
+    margin: 2rem auto;
+}
