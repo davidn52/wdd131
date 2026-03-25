@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Filtered temple gallery with dynamic cards and menu filters.">
+  <title>Filtered Temple Album</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css" media="screen and (min-width: 800px)">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1 class="site-title">Temple Album</h1>
+      <button id="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <a href="#" data-filter="home" class="active">Home</a>
+        <a href="#" data-filter="old">Old</a>
+        <a href="#" data-filter="new">New</a>
+        <a href="#" data-filter="large">Large</a>
+        <a href="#" data-filter="small">Small</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-heading">
+      <h2 id="page-title">Home</h2>
+      <p>Browse temples rendered from JavaScript and filter them with the navigation menu.</p>
+    </div>
+
+    <section id="temple-cards" class="gallery" aria-live="polite"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> David Nwojo | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
