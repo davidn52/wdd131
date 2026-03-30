@@ -1,0 +1,201 @@
+:root {
+  --deep-teal: #0f4c5c;
+  --warm-gold: #e9a03b;
+  --soft-cream: #fff8e8;
+  --ink: #1f2933;
+  --surface: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #fffdf7 0%, var(--soft-cream) 100%);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.eyebrow,
+figcaption {
+  font-family: "Outfit", sans-serif;
+}
+
+.hero {
+  padding: 2rem 1.25rem;
+  background: var(--deep-teal);
+  color: #ffffff;
+}
+
+.brand-lockup {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo-ring {
+  fill: none;
+  stroke: var(--warm-gold);
+  stroke-width: 8;
+}
+
+.logo-mark {
+  fill: var(--warm-gold);
+}
+
+.logo-line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: #cfe7ec;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.tagline {
+  max-width: 58ch;
+  margin: 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.card {
+  background: var(--surface);
+  border-left: 6px solid var(--warm-gold);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 10px 24px rgba(15, 76, 92, 0.08);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--deep-teal);
+}
+
+.palette {
+  display: grid;
+  gap: 1rem;
+}
+
+.swatch {
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.swatch h3,
+.swatch p {
+  margin: 0.2rem 0;
+}
+
+.swatch-deep {
+  background: var(--deep-teal);
+  color: #ffffff;
+}
+
+.swatch-gold {
+  background: var(--warm-gold);
+  color: #251605;
+}
+
+.swatch-cream {
+  background: var(--soft-cream);
+  color: var(--ink);
+  border: 1px solid #eadfbe;
+}
+
+.wireframes {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.wireframe {
+  margin: 0;
+}
+
+figcaption {
+  margin-bottom: 0.75rem;
+  color: var(--deep-teal);
+  font-weight: 600;
+}
+
+.frame {
+  background: #fcfcfc;
+  border: 2px dashed #a7bcc3;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.mobile-frame,
+.desktop-frame {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.desktop-frame {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.wf-block {
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--deep-teal);
+  border-radius: 12px;
+  background: #f4fafb;
+  text-align: center;
+  padding: 0.75rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.wf-hero {
+  min-height: 110px;
+  background: #fff1d7;
+}
+
+.wf-full {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 700px) {
+  .brand-lockup {
+    grid-template-columns: auto 1fr;
+  }
+
+  .palette,
+  .wireframes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .swatch-cream,
+  .wireframes .wireframe:last-child {
+    grid-column: 1 / -1;
+  }
+}
