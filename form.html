@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a product review for WDD 131.">
+    <meta name="author" content="David Nwojo">
+    <title>Product Review Form | WDD 131</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-header__inner">
+            <p class="eyebrow">WDD 131 Product Review</p>
+            <h1>Share Your Product Experience</h1>
+            <p class="intro">Tell us what worked, what stood out, and how your product performed after installation.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-shell" aria-labelledby="review-form-title">
+            <div class="form-shell__content">
+                <h2 id="review-form-title">Review Form</h2>
+                <p class="form-shell__note">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+                <form action="review.html" method="get" class="review-form">
+                    <div class="form-group">
+                        <label for="product">Product Name <span aria-hidden="true">*</span></label>
+                        <select id="product" name="product" required>
+                            <option value="" selected disabled>Select a Product ...</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+                        <p class="hint">Choose one rating from 1 star to 5 stars.</p>
+                        <div class="rating-group">
+                            <input type="radio" id="rating-1" name="rating" value="1" required>
+                            <label for="rating-1" aria-label="1 star">&star;</label>
+
+                            <input type="radio" id="rating-2" name="rating" value="2" required>
+                            <label for="rating-2" aria-label="2 stars">&star;&star;</label>
+
+                            <input type="radio" id="rating-3" name="rating" value="3" required>
+                            <label for="rating-3" aria-label="3 stars">&star;&star;&star;</label>
+
+                            <input type="radio" id="rating-4" name="rating" value="4" required>
+                            <label for="rating-4" aria-label="4 stars">&star;&star;&star;&star;</label>
+
+                            <input type="radio" id="rating-5" name="rating" value="5" required>
+                            <label for="rating-5" aria-label="5 stars">&star;&star;&star;&star;&star;</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
+                        <input type="date" id="installDate" name="installDate" required>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Useful Features</legend>
+                        <p class="hint">Check all that apply.</p>
+                        <div class="checkbox-grid">
+                            <div>
+                                <input type="checkbox" id="durability" name="features" value="Durability">
+                                <label for="durability">Durability</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
+                                <label for="easeOfUse">Ease of Use</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="performance" name="features" value="Performance">
+                                <label for="performance">Performance</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="design" name="features" value="Design">
+                                <label for="design">Design</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="review">Written Review</label>
+                        <textarea id="review" name="review" rows="6" placeholder="Share details about your experience with the product."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userName">User Name</label>
+                        <input type="text" id="userName" name="userName" placeholder="Enter your name">
+                    </div>
+
+                    <input type="submit" value="Submit Review" class="submit-button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> David Nwojo | Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

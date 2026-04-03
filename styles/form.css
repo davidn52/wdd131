@@ -1,0 +1,240 @@
+:root {
+    --page-bg: #f5f0e8;
+    --surface: #fffdf8;
+    --surface-strong: #f0e3d0;
+    --text-main: #1d2a36;
+    --text-soft: #54606c;
+    --accent: #0f6b5b;
+    --accent-strong: #0a4d42;
+    --accent-warm: #d28c2d;
+    --border: #d9cbb8;
+    --shadow: 0 20px 45px rgba(29, 42, 54, 0.12);
+    --radius: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Source Sans 3", sans-serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at top left, rgba(210, 140, 45, 0.18), transparent 28%),
+        linear-gradient(180deg, #fcf8f2 0%, var(--page-bg) 100%);
+}
+
+.page-header {
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+.page-header__inner,
+.form-shell {
+    width: min(100%, 760px);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    font-family: "Outfit", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+h1,
+h2,
+legend {
+    font-family: "Outfit", sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    line-height: 1.05;
+}
+
+.intro,
+.confirmation-copy,
+.form-shell__note,
+.hint {
+    color: var(--text-soft);
+}
+
+main {
+    padding: 0 1.5rem 3rem;
+}
+
+.form-shell {
+    background: var(--surface);
+    border: 1px solid rgba(217, 203, 184, 0.8);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.form-shell__content {
+    padding: 1.5rem;
+}
+
+.review-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.65rem;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+label,
+legend {
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    font: inherit;
+    color: var(--text-main);
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(15, 107, 91, 0.2);
+    outline-offset: 1px;
+    border-color: var(--accent);
+}
+
+.rating-group {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.rating-group input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rating-group label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    min-width: 7rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--accent-warm);
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.rating-group label:hover,
+.rating-group input[type="radio"]:focus-visible + label,
+.rating-group input[type="radio"]:checked + label {
+    border-color: var(--accent);
+    background: #f1fbf8;
+    transform: translateY(-1px);
+}
+
+.checkbox-grid {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.checkbox-grid div {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--accent);
+}
+
+.submit-button,
+.return-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.95rem 1.4rem;
+    font: 600 1rem "Outfit", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+    cursor: pointer;
+}
+
+.submit-button:hover,
+.return-link:hover,
+.submit-button:focus-visible,
+.return-link:focus-visible {
+    filter: brightness(1.05);
+}
+
+.review-summary {
+    display: grid;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.review-summary div {
+    padding: 1rem;
+    border-radius: 16px;
+    background: var(--surface-strong);
+}
+
+.review-summary dt {
+    margin-bottom: 0.35rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 700;
+}
+
+.review-summary dd {
+    margin: 0;
+}
+
+.review-counter {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--text-soft);
+}
+
+@media (min-width: 700px) {
+    .form-shell__content {
+        padding: 2rem;
+    }
+
+    .checkbox-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
